@@ -31,6 +31,9 @@ const dineroSlice = createSlice({
                 break;
             }
         },
+        addFuenteGasto(state,action){
+            const {id, cat, ing, tipo} = action.payload;
+        },
         deleteFuente(state, action){
             const {id} = action.payload;
             delete state.ingresos[id];
@@ -38,7 +41,7 @@ const dineroSlice = createSlice({
     }
 })
 
-export const { addIngreso, addFuente, deleteFuente } = dineroSlice.actions;
+export const { addIngreso, addFuente, deleteFuente, addFuenteGasto } = dineroSlice.actions;
 export const selectInicial = state => state.dinero.inicial;
 export const selectRestante = state => state.dinero.restante;
 export const selectIngresos = state => state.dinero.ingresos;
