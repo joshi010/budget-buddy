@@ -57,7 +57,7 @@ export default function Forms(props){
                     <input type="radio" id="bancos" value="bancos" name="lel" required/>
                     <label for="bancos">Bancos</label>
                 </div>
-                <h3 id="text-text">Periocidad</h3>
+                <h3 id="text-text">Perioricidad</h3>
                 <div className="radio-elements">
                     <input type="radio" id="periocidad" name="periocidad" value="mensual" required/>
                     <label for="periocidad">Fijo Mensual</label>

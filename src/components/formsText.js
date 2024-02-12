@@ -66,6 +66,11 @@ export default function FormsText(props){
             {
                 props.action == 'presup' ? <input type="number" placeholder="Monto" className="presup" step={0.01} min={bool ? 0 : 1} required value={mont} onChange={(e) => setMont(e.currentTarget.value)}/> : null
             }
+            {
+                props.action == 'presup' && !bool ? <><h3 id="text-text">Perioricidad</h3> <div className="radio-elements"><input type="radio" id="periocidad" name="periocidad" value="mensual" required/><label for="periocidad">Fijo Mensual</label></div>
+                <div className="radio-elements"><input type="radio" id="variabilidad" name="periocidad" value="variabilidad" required/><label for="variabilidad">Variable</label></div></> 
+            : null
+            }
             <button id="send">{ bool && props.action == "ing" ? "Eliminar" : "Realizar"}</button>
             <button id="cancel"  onMouseUp={handleCancel}>Cancelar</button>
         </form>

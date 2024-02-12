@@ -26,7 +26,7 @@ export default function Presupuesto(){
                     return(
                         <div key={categoria.id} className="dineros">
                             <p>{categoria.cat}</p>
-                            <p>{`$${categoria.mont} MXN.`}</p>
+                            <p>{`$${Number(categoria.mont).toLocaleString("en-us")} MXN.`}</p>
                         </div>
                     )
                 })
